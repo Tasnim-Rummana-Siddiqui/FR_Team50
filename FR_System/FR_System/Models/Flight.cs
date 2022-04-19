@@ -20,7 +20,7 @@ namespace FR_System.Models
         [Display(Name = "Departure Date")]
         [DataType(DataType.Date)]
 
-        public DateTime DDate { get; set; }
+        public System.DateTime DDate { get; set; }
 
         [Display(Name = "Departure Time")]
         [StringLength(15)]
@@ -29,7 +29,7 @@ namespace FR_System.Models
 
 
         public int Planeid { get; set; }
-        public virtual AeroPlaneInfo PlaneInfo { get; set; }
+        public virtual string PlaneInfo { get; set; }
 
         [Display(Name = "Seat Type")]
         [StringLength(25)]
