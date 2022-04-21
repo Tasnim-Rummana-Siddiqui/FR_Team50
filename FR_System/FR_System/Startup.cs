@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using FR_System.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Session;
 
 namespace FR_System
 {
@@ -27,6 +28,14 @@ namespace FR_System
         {
             services.AddDbContextPool<ContextDB>(options => options.UseSqlServer(Configuration.GetConnectionString("FlightDbConnection")));
             services.AddControllersWithViews();
+            services.AddDistributedMemoryCache();
+
+            services.AddSession(options =>
+            {
+                //options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,6 +57,8 @@ namespace FR_System
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthorization();
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {
