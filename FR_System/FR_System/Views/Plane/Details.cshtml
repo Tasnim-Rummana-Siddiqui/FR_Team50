@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FR_System.Models.Plane>
+
+<h1>Plane Information</h1>
+<div class="container p-3">
+	<div class="row pt-4">
+		<div class="col-6">
+			<h2 class="text-primary">Plane Details List</h2>
+		</div>
+	</div>
+	<br />
+
+	@if(Model.Count() > 0)
+	{
+		<table class="table table-bordered table-striped" style="wif=dth:100%">
+			<thead>
+				<tr>
+					<th>PlaneID</th>
+					<th>Plane Name</th>
+					<th>Number of Seats</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+			   {
+				   <tr>
+					   <td width="30%">@item.PlaneID</td>
+					   <td width="30%">@item.PlaneName</td>
+					   <td width="30%">@item.Seats</td>
+				   </tr>
+			   }
+			</tbody>
+		</table>
+	}
+	else
+	{
+		<p>No flight details available.</p>
+	}
+</div>
