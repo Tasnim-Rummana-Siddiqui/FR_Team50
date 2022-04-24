@@ -36,7 +36,7 @@ namespace FR_System.Models
 
         [Required(ErrorMessage = "Price Required")]
         [Display(Name = "Price")]
-        public decimal price { get; set; }
+        public decimal Price { get; set; }
 
         public virtual ICollection<Reservation> Reservations { get; set; }
     }

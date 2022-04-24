@@ -62,12 +62,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             </button>
-            <h1><a class="navbar-brand"  href="/Admin/Index"><span class="fa fa-plane"></span> Flight<span class="dashboard_text">Reservation</span></a></h1>
+            <h1><a class="navbar-brand"  asp-action="Dashboard" asp-controller="Admin"><span class="fa fa-plane"></span> Flight<span class="dashboard_text">Reservation</span></a></h1>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="sidebar-menu">
               <li class="treeview">
-                <a href="/Dashboard">
+                <a asp-action="Dashboard" asp-controller="Admin">
                 <i class="fa fa-dashboard"></i> <span>Admin Dashboard</span>
                 </a>
               </li>
@@ -78,8 +78,8 @@
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="/Plane/Create"><i class="fa fa-angle-right"></i> Add</a></li>
-                  <li><a href="/Plane"><i class="fa fa-angle-right"></i> Details</a></li>
+                  <li><a asp-controller="Plane" asp-action="Create"><i class="fa fa-angle-right"></i> Add</a></li>
+                  <li><a asp-controller="Plane" asp-action="Details"><i class="fa fa-angle-right"></i> Details</a></li>
                 </ul>
               </li>
               
@@ -91,8 +91,8 @@
                 <i class="fa fa-angle-left pull-right"></i>
                 </a>
                 <ul class="treeview-menu">
-                  <li><a href="/Flight/Create"><i class="fa fa-angle-right"></i> Add</a></li>
-                  <li><a href="/Flight"><i class="fa fa-angle-right"></i> Details</a></li>
+                  <li><a asp-controller="Flight" asp-action="Create"><i class="fa fa-angle-right"></i> Add</a></li>
+                  <li><a asp-controller="Flight" asp-action="Details"><i class="fa fa-angle-right"></i> Details</a></li>
                 </ul>
               </li>
 			  <li>
