@@ -1,4 +1,5 @@
 ﻿using FR_System.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -15,6 +16,8 @@ namespace FR_System.Controllers
         // GET-Create Action
         public IActionResult Create()
         {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+              return RedirectToAction("Login","Admin");
             return View();
         }
 
@@ -23,6 +26,8 @@ namespace FR_System.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create(Flight flight)
         {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+                return RedirectToAction("Login", "Admin");
             _db.Flights.Add(flight);
             _db.SaveChanges();
             return RedirectToAction("Details");
@@ -30,12 +35,16 @@ namespace FR_System.Controllers
 
         public IActionResult Details()
         {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+                return RedirectToAction("Login", "Admin");
             IEnumerable<Flight> flightList = _db.Flights;
             return View(flightList);
         }
         // GET - Delete Action
         public IActionResult Delete(int? id)
         {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+                return RedirectToAction("Login", "Admin");
             if (id == null || id == 0)
             {
                 return NotFound();
@@ -53,6 +62,8 @@ namespace FR_System.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult DeletePost(Flight? f)
         {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+                return RedirectToAction("Login", "Admin");
             if (f == null)
             {
                 return NotFound();
@@ -72,6 +83,8 @@ namespace FR_System.Controllers
         // GET - Update Action
         public IActionResult Update(int? id)
         {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+                return RedirectToAction("Login", "Admin");
             if (id == null || id == 0)
             {
                 return NotFound();
@@ -89,6 +102,8 @@ namespace FR_System.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult UpdatePost(Flight? f)
         {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+                return RedirectToAction("Login", "Admin");
             if (f == null)
             {
                 return NotFound();
@@ -97,5 +112,6 @@ namespace FR_System.Controllers
             _db.SaveChanges();
             return RedirectToAction("Details");
         }
+
     }
 }
