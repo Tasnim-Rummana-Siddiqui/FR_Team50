@@ -15,11 +15,19 @@ namespace FR_System.Models
 
         [Display(Name = "First Name")]
         [Required(ErrorMessage = "First Name Req")]
+        [MaxLength(30, ErrorMessage = "Max 30 char req"), MinLength(4, ErrorMessage = "Min 4 char req")]
         public string FirstName { get; set; }
 
         [Display(Name = "Last Name")]
         [Required(ErrorMessage = "Last Name Req")]
+        [MaxLength(30, ErrorMessage = "Max 30 char req"), MinLength(4, ErrorMessage = "Min 4 char req")]
         public string LastName { get; set; }
+
+        [Display(Name = "User Name")]
+        [Required(ErrorMessage = "User Name Req")]
+        [MaxLength(30, ErrorMessage = "Max 30 char req"), MinLength(4, ErrorMessage = "Min 4 char req")]
+        public string UserName { get; set; }
+
 
         [Display(Name = "Gender")]
         [Required(ErrorMessage = "Last Name Req")]
@@ -28,6 +36,12 @@ namespace FR_System.Models
         [Required]
         [Range(18, 120, ErrorMessage = "min 18 years has book the flight")]
         public int Age { get; set; }
+
+        [Display(Name = "Address")]
+        [Required(ErrorMessage = "Address Req")]
+        [MinLength(3, ErrorMessage = "Min 3 char req"), MaxLength(40, ErrorMessage = "Max 40 char req")]
+        public string Address { get; set; }
+
 
         [Display(Name = "Phone No")]
         [Required(ErrorMessage = "Phone No Req"), RegularExpression(@"^([0-9]{11})$", ErrorMessage = "Phone No is not valid")]
