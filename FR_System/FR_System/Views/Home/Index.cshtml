@@ -1,38 +1,75 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div class="container py-4 py-xl-5">
-<div class="row gy-4 gy-md-0">
-<div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
-<div style="max-width: 350px;">
-<h2 class="text-uppercase fw-bold">
-<br />
-Enjoy the best feeling in the world.
-<br />
-</h2>
-<p class="my-3">
-<br />
-Book a flight with us. Feel the best flight booking experience for your work/tours
-<br />
-<br />
-</p>
-<a class="btn btn-primary btn-lg me-2" role="button" href="#">Button</a>
-<a class="btn btn-outline-primary btn-lg" role="button" href="#">Button</a>
-</div>
-</div>
-<div class="col-md-6">
-<div class="p-xl-5 m-xl-5">
-<img class="rounded img-fluid w-100 git-cover" style="min-height: 300px;" src="~/web/images/Aeroplane.jpg" alt="Aeroplane" />
-</div>
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="~/homepage/StyleSheet.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container m-0 p-0 w-100">
+    <section id="hero" class="vw-100">
+        <div class="row w-100 vh-100" style="padding-top: 8%;">
+            <div id="leftcol" style="padding-left: 10%;">
+                <h1 class="text-uppercase fw-bold">Book The flight with us.</h1>
+                <p>Enjoy the best experience ever possible.</p>
+                <a class="btn btn-primary btn-lg me-2 w-10" role="button" href="#">Log in</a>
+            <a class="btn btn-outline-primary btn-lg w-10" role="button" href="#">Register</a>
+            </div>
+            
+        </div>
+        
+        
+    </section>
+
+    </div>
+
+@*
+<div class="container vh-90" >
+    <div class="row">
+        <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+            <div>
+                <h2 class="text-uppercase fw-bold">
+                <br />
+                Enjoy the best feeling in the world.
+                <br />
+                </h2>
+                <p class="my-3">
+                <br />
+                                    Book a flight and live the best flight booking services for your needs.
+                <br />
+                <br />
+                </p>
+                <a class="btn btn-primary btn-lg me-2" role="button" href="#">Login</a>
+                <a class="btn btn-outline-primary btn-lg" role="button" href="#">Register</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div>
+                       <img class="rounded img-fluid w-100 git-cover" src="~/web/images/Aeroplane.jpg" alt="Aeroplane" />
+            </div>
+        </div>
+
+    </div>
+</div>*@
+    <div class="container mt-5">
+<div class="card p-5 rounded">
+    <h3 class="card-title">Why book on Flight Reservation System?</h3>
+    <p class="card-body">Flight Reservation System is centered on making travel simple and has been designed to let you look for cheap flights or complete your flight booking in just a few clicks. The booking experience is seamless and fast with our features like Expressway – which allows for easy checkout, Shortlist – this lets you compare multiple itineraries across dates, Fare alert – here we inform you of price drops or hikes, and even EMI options for expensive air tickets. Our round-the-clock customer service ensures all your queries and concerns are addressed efficiently and resolved.</p>
 </div>
 
-</div>
-</div>
-    
-
-<h1>Why book on Flight Reservation System?</h1>
-<p>Flight Reservation System is centered on making travel simple and has been designed to let you look for cheap flights or complete your flight booking in just a few clicks. The booking experience is seamless and fast with our features like Expressway – which allows for easy checkout, Shortlist – this lets you compare multiple itineraries across dates, Fare alert – here we inform you of price drops or hikes, and even EMI options for expensive air tickets. Our round-the-clock customer service ensures all your queries and concerns are addressed efficiently and resolved.</p>
-<h1>How to search for flights?</h1>
+<div class="card p-5 rounded mt-2">
+<h3 class="card-title">How to search for flights?</h3>
+<div class="card-body">
 <p>Our search is designed on the principle of best flight discovery and is very easy to use.</p>
 <ul>
     <li>Enter from and to city/airport</li>
@@ -40,9 +77,15 @@ Book a flight with us. Feel the best flight booking experience for your work/tou
     <li>Choose the number of travelers and hit enter</li>
 </ul>
 <p>You’ll be directed to a search list of all the flights available with the cheapest ones on the top. You can further filter your search by choosing preferences and filters like time, duration, number of stops, and by airlines or even look for other dates by just clicking on the calendar visible on the right side of the page.</p>
-<h1>What’s more?</h1>
-<p>Flight ticket booking or planning your travel is made simpler with our round trip and multicity options. When you hit enter, your search list page shows the results for both onward and return in a split screen format letting you choose flights in one go for a round trip. The multicity search page shows a list of complete itineraries that removes the hassle of you calculating time, transfers and layovers letting you finish your online flight booking. To ensure you get the best price we highlight offers, sales and other promotions on the checkout page. Post booking, our portal allows for easy cancellations or amendments without having to make calls to the airlines.
+</div>
+</div>
+<div class="card p-5 rounded mt-2">
+<h3 class="card-title">What’s more?</h3>
+<p class="card-body">Flight ticket booking or planning your travel is made simpler with our round trip and multicity options. When you hit enter, your search list page shows the results for both onward and return in a split screen format letting you choose flights in one go for a round trip. The multicity search page shows a list of complete itineraries that removes the hassle of you calculating time, transfers and layovers letting you finish your online flight booking. To ensure you get the best price we highlight offers, sales and other promotions on the checkout page. Post booking, our portal allows for easy cancellations or amendments without having to make calls to the airlines.
 
 </p>
+</div>
 
 
+</div>
+</body>
