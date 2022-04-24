@@ -8473,23 +8473,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tasni\\.nuget\\packages\\": {},
+    "C:\\Users\\Teja\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tasni\\OneDrive\\Documents\\newproject123\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj",
+      "projectUniqueName": "C:\\Users\\Teja\\Desktop\\Team50_FR\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj",
       "projectName": "FR_System",
-      "projectPath": "C:\\Users\\tasni\\OneDrive\\Documents\\newproject123\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj",
-      "packagesPath": "C:\\Users\\tasni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tasni\\OneDrive\\Documents\\newproject123\\FR_Team50\\FR_System\\FR_System\\obj\\",
+      "projectPath": "C:\\Users\\Teja\\Desktop\\Team50_FR\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj",
+      "packagesPath": "C:\\Users\\Teja\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Teja\\Desktop\\Team50_FR\\FR_Team50\\FR_System\\FR_System\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\tasni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Teja\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8549,8 +8549,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Teja\\Desktop\\Team50_FR\\FR_Team50\\FR_System\\FR_System\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\tasni\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\tasni\\.nuget\\packages",
+      "C:\\Users\\Teja\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Teja\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ]
   }
