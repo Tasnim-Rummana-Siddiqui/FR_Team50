@@ -17,7 +17,7 @@ namespace FR_System.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Login");
         }
         public IActionResult Login()
         {
@@ -50,6 +50,11 @@ namespace FR_System.Controllers
                 return RedirectToAction("Login");
             else
                 return View();
+        }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.SetString("u",String.Empty);
+            return RedirectToAction("Login");
         }
     }
 }

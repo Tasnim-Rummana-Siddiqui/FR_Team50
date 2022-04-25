@@ -8473,23 +8473,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tasni\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tasni\\OneDrive\\Documents\\newproject123\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj",
+      "projectUniqueName": "E:\\myproj\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj",
       "projectName": "FR_System",
-      "projectPath": "C:\\Users\\tasni\\OneDrive\\Documents\\newproject123\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj",
-      "packagesPath": "C:\\Users\\tasni\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tasni\\OneDrive\\Documents\\newproject123\\FR_Team50\\FR_System\\FR_System\\obj\\",
+      "projectPath": "E:\\myproj\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "E:\\myproj\\FR_Team50\\FR_System\\FR_System\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\tasni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

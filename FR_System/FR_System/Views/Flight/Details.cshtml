@@ -1,7 +1,17 @@
 ﻿@model IEnumerable<FR_System.Models.Flight>
 
-<h1>Index-Flight Details</h1>
-<div class="container p-3">
+@{
+    ViewData["Title"] = "Flight Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    
+}
+
+<div id="page-wrapper">
+			<div class="main-page">
+				<h2 class="title1">Index-Flight Details</h2>
+				<div class="blank-page widget-shadow scroll" id="style-2 div1">
+@*<h1>Index-Flight Details</h1>
+*@<div class="container p-3">
 	<div class="row pt-4">
 		<div class="col-6">
 			<h2 class="text-primary">Flight Details List</h2>
@@ -11,7 +21,7 @@
 
 	@if(Model.Count() > 0)
 	{
-		<table class="table table-bordered table-striped" style="wif=dth:100%">
+		<table class="table table-bordered table-striped" style="width:90%">
 			<thead>
 				<tr>
 					<th>Flight Id</th>
@@ -38,7 +48,7 @@
 					   <td width="20%">
 						   <div class="w-100 btn-group" role="group">
 								<a asp-controller="Flight" asp-action="Update" asp-route-Id="@item.FlightId" class="btn btn-primary mx-1">Update Flight</a>
-								<a asp-controller="Flight" asp-action="Delete" asp-route-Id="@item.FlightId" class="btn btn-danger mx-1">Delete Flight</a>
+								<a asp-controller="Flight" asp-action="Delete" asp-route-Id="@item.FlightId" style="margin-top: 10px;" class="btn btn-danger mx-1">Delete Flight</a>
 						   </div>
 					   </td>
 				   </tr>
@@ -53,3 +63,6 @@
 	}
 		  <a class="btn btn-danger w-20" asp-action="Dashboard" asp-controller="Admin">Back</a>
 </div>
+</div>
+			</div>
+		</div>
