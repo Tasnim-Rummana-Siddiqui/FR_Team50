@@ -51,5 +51,10 @@ namespace FR_System.Controllers
             else
                 return View();
         }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.SetString("u", String.Empty);
+            return RedirectToAction("Login");
+        }
     }
 }
