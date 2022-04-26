@@ -38,5 +38,77 @@ namespace FR_System.Controllers
             IEnumerable<Plane> planeList = _db.Planes;
             return View(planeList);
         }
+        // GET - Delete Action
+        public IActionResult Delete(int? id)
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+                return RedirectToAction("Login", "Admin");
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var plane = _db.Planes.Find(id);
+            if (plane == null)
+            {
+                return NotFound();
+            }
+            return View(plane);
+        }
+
+        // POST - Delete Action
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(int? id,Plane p)
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+                return RedirectToAction("Login", "Admin");
+            if (id == null || id==0)
+            {
+                return NotFound();
+            }
+            var plane = _db.Planes.Find(id);
+            if (plane == null)
+            {
+                return NotFound();
+            }
+
+            _db.Planes.Remove(plane);
+            _db.SaveChanges();
+            return RedirectToAction("Details");
+        }
+
+        // GET - Update Action
+        public IActionResult Update(int? id)
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+                return RedirectToAction("Login", "Admin");
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var plane = _db.Planes.Find(id);
+            if (plane == null)
+            {
+                return NotFound();
+            }
+            return View(plane);
+        }
+
+        // POST-Update Action
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Update(Plane p)
+        {
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+                return RedirectToAction("Login", "Admin");
+            if ( p== null)
+            {
+                return NotFound();
+            }
+            _db.Planes.Update(p);
+            _db.SaveChanges();
+            return RedirectToAction("Details");
+        }
+
     }
 }

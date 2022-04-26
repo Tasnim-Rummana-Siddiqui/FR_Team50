@@ -499,3 +499,5 @@ E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\FR_System.csproj.C
 E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\FR_System.dll
 E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\FR_System.pdb
 E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\FR_System.genruntimeconfig.cache
+E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\Plane\Delete.cshtml.g.cs
+E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\Plane\Update.cshtml.g.cs
