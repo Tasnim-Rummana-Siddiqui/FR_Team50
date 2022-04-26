@@ -27,6 +27,7 @@
 					<th>PlaneID</th>
 					<th>Plane Name</th>
 					<th>Number of Seats</th>
+					<th>Actions</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -36,6 +37,12 @@
 					   <td width="30%">@item.PlaneID</td>
 					   <td width="30%">@item.PlaneName</td>
 					   <td width="30%">@item.Seats</td>
+					   <td width="20%">
+						   <div class="w-100 btn-group" role="group">
+								<a asp-controller="Plane" asp-action="Update" asp-route-Id="@item.PlaneID" class="btn btn-primary mx-1">Update Plane</a>
+								<a asp-controller="Plane" asp-action="Delete" asp-route-Id="@item.PlaneID" style="margin-top: 10px;" class="btn btn-danger mx-1">Delete Plane</a>
+						   </div>
+					   </td>
 				   </tr>
 			   }
 			</tbody>
