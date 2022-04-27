@@ -1,0 +1,13 @@
+﻿body {
+    font-family: "Open Sans",sans-serif;
+}
+
+#hero {
+    background-image: url(../homepage/images/flight.jpg);
+    background-size: cover;
+}
+
+#leftcol {
+    padding-left: 10%;
+    padding-top: 10%;
+}

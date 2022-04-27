@@ -1,0 +1,115 @@
+﻿@model FR_System.Models.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>User Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="~/loginform/css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-5">
+					<div class="login-wrap p-4 p-md-5">
+		      	<div class="icon d-flex align-items-center justify-content-center">
+		      		<span class="fa fa-user-o"></span>
+		      	</div>
+		      	<h3 class="text-center mb-4">Register User Account</h3>
+				<form asp-action="RegisterPost" method="post" class="login-form">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="FirstName" class="control-label "></label>
+                        <input asp-for="FirstName" class="form-control rounded-left" placeholder="Enter Firstname"/>
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+			        <div class="form-group">
+                        <label asp-for="LastName" class="control-label "></label>
+                        <input asp-for="LastName" class="form-control rounded-left" placeholder="Enter Lastname"/>
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+			        <div class="form-group">
+                        <label asp-for="UserName" class="control-label "></label>
+                        <input asp-for="UserName" class="form-control rounded-left" placeholder="Enter Username"/>
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Age" class="control-label "></label>
+                        <input asp-for="Age" class="form-control rounded-left" placeholder="Enter Age"/>
+                        <span asp-validation-for="Age" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Gender" class="control-label "></label>
+                        <div class="from-control">
+                            <input id="male" asp-for="Gender" type="radio"  value="Male">
+                            <label for="male">Male</label>
+                            <input id="female" asp-for="Gender" type="radio" value="Female">
+                            <label for="female">Female</label>
+                            <input id="other" asp-for="Gender" type="radio" value="Other">
+                            <label for="other">Other</label>
+                        </div>
+                        
+                       @* <input asp-for="Gender" class="form-control rounded-left" placeholder="Gender"/>*@
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Address" class="control-label "></label>
+                        <input asp-for="Address" class="form-control rounded-left" placeholder="Enter Address"/>
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PhoneNo" class="control-label "></label>
+                        <input asp-for="PhoneNo" class="form-control rounded-left" placeholder="Enter Phone No."/>
+                        <span asp-validation-for="PhoneNo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="NICNo" class="control-label "></label>
+                        <input asp-for="NICNo" class="form-control rounded-left" placeholder="Enter NIC No"/>
+                        <span asp-validation-for="NICNo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label "></label>
+                        <input asp-for="Email" class="form-control rounded-left" placeholder="Enter Email Address"/>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label "></label>
+                        <input asp-for="Password" class="form-control rounded-left" placeholder="Enter Password"/>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CPassword" class="control-label "></label>
+                        <input asp-for="CPassword" class="form-control rounded-left" placeholder="Enter Password Again"/>
+                        <span asp-validation-for="CPassword" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Sign Up" class="btn btn-primary rounded submit p-3 px-5" />
+                    </div>
+                </form>
+						
+	        </div>
+				</div>
+			</div>
+		</div>
+	</section>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

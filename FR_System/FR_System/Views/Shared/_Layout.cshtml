@@ -9,9 +9,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FR_System</a>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+            <div class="container d-flex flex-row justify-content-between">
+                <a class="navbar-brand mb-0 h1" style="font-size: large;" asp-area="" asp-controller="Home" asp-action="Index">Flight.com</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -26,14 +26,21 @@
                         </li>
                     </ul>
                 </div>
+                <div class="flex-end">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item mr-3">
+                            <a class="btn btn-outline-primary btn-lg w-10" role="button" asp-controller="User" asp-action="Login">Log in</a>
+                        </li>
+                        <li class="nav-item">
+                             <a class="btn btn-primary btn-lg me-2 w-10" role="button" asp-controller="User" asp-action="Register">Register</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    @RenderBody()
+
 
     <footer class="border-top footer text-muted">
         <div class="container">

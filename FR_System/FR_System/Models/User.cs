@@ -30,7 +30,7 @@ namespace FR_System.Models
 
 
         [Display(Name = "Gender")]
-        [Required(ErrorMessage = "Last Name Req")]
+        [Required(ErrorMessage = "Gender Required")]
         public string Gender { get; set; }
 
         [Required]
@@ -65,6 +65,7 @@ namespace FR_System.Models
 
         [Display(Name = "Confirm Password")]
         [DataType(DataType.Password)]
+        [NotMapped]
         [Compare("Password", ErrorMessage = "Password not matched")]
         public string CPassword { get; set; }
 

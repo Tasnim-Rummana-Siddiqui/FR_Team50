@@ -3,7 +3,6 @@ using FR_System.Models;
 using System.Linq;
 using System;
 using Microsoft.AspNetCore.Http;
-using System.Collections.Generic;
 
 namespace FR_System.Controllers
 {
@@ -50,6 +49,27 @@ namespace FR_System.Controllers
                 return RedirectToAction("Login");
             else
                 return View();
+        }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult RegisterPost(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                if (user == null)
+                {
+                    return NoContent();
+                }
+                context.Users.Add(user);
+                context.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            return RedirectToAction("Register");
         }
     }
 }

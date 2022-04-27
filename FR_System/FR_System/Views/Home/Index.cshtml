@@ -1,8 +1,59 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="~/homepage/StyleSheet.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container m-0 p-0 w-100">
+    <section id="hero" class="vw-100">
+        <div class="row w-100 vh-100" style="padding-top: 8%;">
+            <div id="leftcol" style="padding-left: 10%;">
+                <h1 class="text-uppercase fw-bold">Book The flight with us.</h1>
+                <p>Enjoy the best experience ever possible.</p>
+                <a class="btn btn-primary btn-lg me-2 w-10" role="button" asp-controller="User" asp-action="Login">Log in</a>
+            <a class="btn btn-outline-primary btn-lg w-10" role="button" asp-controller="User" asp-action="Register">Register</a>
+            </div>
+            
+        </div>
+    </section>
+    </div>
+    <div class="container mt-5">
+<div class="card p-5 rounded">
+    <h3 class="card-title">Why book on Flight Reservation System?</h3>
+    <p class="card-body">Flight Reservation System is centered on making travel simple and has been designed to let you look for cheap flights or complete your flight booking in just a few clicks. The booking experience is seamless and fast with our features like Expressway – which allows for easy checkout, Shortlist – this lets you compare multiple itineraries across dates, Fare alert – here we inform you of price drops or hikes, and even EMI options for expensive air tickets. Our round-the-clock customer service ensures all your queries and concerns are addressed efficiently and resolved.</p>
 </div>
+
+<div class="card p-5 rounded mt-2">
+<h3 class="card-title">How to search for flights?</h3>
+<div class="card-body">
+<p>Our search is designed on the principle of best flight discovery and is very easy to use.</p>
+<ul>
+    <li>Enter from and to city/airport</li>
+    <li>Select the date of travel</li>
+    <li>Choose the number of travelers and hit enter</li>
+</ul>
+<p>You’ll be directed to a search list of all the flights available with the cheapest ones on the top. You can further filter your search by choosing preferences and filters like time, duration, number of stops, and by airlines or even look for other dates by just clicking on the calendar visible on the right side of the page.</p>
+</div>
+</div>
+<div class="card p-5 rounded mt-2">
+<h3 class="card-title">What’s more?</h3>
+<p class="card-body">Flight ticket booking or planning your travel is made simpler with our round trip and multicity options. When you hit enter, your search list page shows the results for both onward and return in a split screen format letting you choose flights in one go for a round trip. The multicity search page shows a list of complete itineraries that removes the hassle of you calculating time, transfers and layovers letting you finish your online flight booking. To ensure you get the best price we highlight offers, sales and other promotions on the checkout page. Post booking, our portal allows for easy cancellations or amendments without having to make calls to the airlines.
+
+</p>
+</div>
+
+
+</div>
+</body>

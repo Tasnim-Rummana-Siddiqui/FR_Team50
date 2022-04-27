@@ -1,10 +1,20 @@
 ﻿@model FR_System.Models.Flight
 
+@{
+    ViewData["Title"] = "Delete Flight";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    
+}
+
+<div id="page-wrapper">
+			<div class="main-page">
+				<h2 class="title1">Delete Flight</h2>
+				<div class="blank-page widget-shadow scroll" id="style-2 div1">
 <form method="post" asp-action="DeletePost">
         <div class="border p-3">
-            <div class="form-group row">
+            @* <div class="form-group row">
                 <h2 class="text-black-50 pl-3">Delete Flight Details</h2>
-            </div>
+            </div> *@
             <div class="row">
                 <div class="col-12">
                     <div hidden class="form-group row">
@@ -57,7 +67,7 @@
                                 <input type="submit" class="btn btn-danger w-75" value="Delete Flight" />
                             </div>
                             <div class="col">
-                                <a class="btn btn-success w-75" asp-action="Dashboard" asp-controller="Admin">Back</a>
+                                <a class="btn btn-success w-75" asp-action="Details" asp-controller="Flight">Back</a>
                             </div>
                         </div>
                      </div>
@@ -67,5 +77,6 @@
         
         
 </form>
-
-
+</div>
+</div>
+</div>

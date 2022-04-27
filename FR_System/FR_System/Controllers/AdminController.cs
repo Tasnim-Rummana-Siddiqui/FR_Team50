@@ -3,7 +3,6 @@ using FR_System.Models;
 using System.Linq;
 using System;
 using Microsoft.AspNetCore.Http;
-using System.Collections.Generic;
 
 namespace FR_System.Controllers
 {
@@ -17,7 +16,7 @@ namespace FR_System.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Login");
         }
         public IActionResult Login()
         {
@@ -34,7 +33,8 @@ namespace FR_System.Controllers
 
             if (x != null)
             {
-                HttpContext.Session.SetString("u", ad.AdminName);
+                HttpContext.Session.SetString("u", x.AdminName);
+                HttpContext.Session.SetString("AID", x.AdminId.ToString());
                 return RedirectToAction("Dashboard");
             }
             else
@@ -49,7 +49,24 @@ namespace FR_System.Controllers
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
                 return RedirectToAction("Login");
             else
-                return View();
+            {
+                int id = int.Parse(HttpContext.Session.GetString("AID"));
+
+                var admin = context.Admins.Find(id);
+                if (admin == null)
+                {
+                    ViewBag.m = "ID or UserName not Matched";
+                    return RedirectToAction("Login");
+                }
+                return View(admin);
+            }
+
+        }
+        public IActionResult Logout()
+        {
+            HttpContext.Session.SetString("u", String.Empty);
+            HttpContext.Session.SetString("AID", String.Empty);
+            return RedirectToAction("Login");
         }
     }
 }
