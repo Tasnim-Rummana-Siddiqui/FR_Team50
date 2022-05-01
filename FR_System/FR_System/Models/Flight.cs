@@ -30,8 +30,8 @@ namespace FR_System.Models
         public string DTime { get; set; }
 
         [Required(ErrorMessage = "Plane No Required"), Display(Name = "Plane No:")]
-        public int PlaneId { get; set; }
-        [ForeignKey("PlaneId")]
+        public int PlaneID { get; set; }
+        [ForeignKey("PlaneID")]
         public virtual Plane Planes { get; set; }
 
         [Required(ErrorMessage = "Price Required")]

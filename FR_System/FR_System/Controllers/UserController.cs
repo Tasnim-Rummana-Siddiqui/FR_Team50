@@ -20,7 +20,7 @@ namespace FR_System.Controllers
         }
         public IActionResult Login()
         {
-            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("username")))
                 return View();
 
             else
@@ -33,7 +33,8 @@ namespace FR_System.Controllers
 
             if (x != null)
             {
-                HttpContext.Session.SetString("u", ad.UserName);
+                HttpContext.Session.SetString("username", x.UserName);
+                HttpContext.Session.SetString("userid", x.UserId.ToString());
                 return RedirectToAction("Dashboard");
             }
             else
@@ -45,7 +46,7 @@ namespace FR_System.Controllers
 
         public IActionResult Dashboard()
         {
-            if (string.IsNullOrEmpty(HttpContext.Session.GetString("u")))
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("username")))
                 return RedirectToAction("Login");
             else
                 return View();
@@ -53,23 +54,54 @@ namespace FR_System.Controllers
 
         public IActionResult Register()
         {
-            return View();
+            
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("username")))
+                return View();
+            else
+                return RedirectToAction("Dashboard");
         }
 
         [HttpPost]
-        public IActionResult RegisterPost(User user)
+        public IActionResult Register(User user)
         {
+            ViewBag.regm = "hello";
             if (ModelState.IsValid)
             {
                 if (user == null)
                 {
                     return NoContent();
                 }
+                var x = context.Users.Where(a => a.Email == user.Email).FirstOrDefault();
+                if (x != null) {
+                    ViewBag.regm = "User with same Email ID is registered";
+                    return View();
+                }
+                x = context.Users.Where(a => a.UserName == user.UserName).FirstOrDefault();
+                if (x != null)
+                {
+                    ViewBag.regm = "User Name not available";
+                    return View();
+                }
                 context.Users.Add(user);
                 context.SaveChanges();
                 return RedirectToAction("Index", "Home");
             }
-            return RedirectToAction("Register");
+            return View();
         }
+        //public IActionResult Booking(int? id)
+        //{
+        //    if (string.IsNullOrEmpty(HttpContext.Session.GetString("username")))
+        //        return RedirectToAction("Login");
+        //    if (id == null || id == 0)
+        //    {
+        //        return NotFound();
+        //    }
+        //    var flight = context.Flights.Find(id);
+        //    if (flight == null)
+        //    {
+        //        return NotFound();
+        //    }
+        //    return View(flight);
+        //}
     }
 }

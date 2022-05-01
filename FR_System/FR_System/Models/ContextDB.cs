@@ -14,5 +14,8 @@ namespace FR_System.Models
         public DbSet<Plane> Planes { get; set; }
         public DbSet<Flight> Flights { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+            modelBuilder.Entity<User>().HasIndex(p => new{ p.UserName,p.Email}).IsUnique(true);
+        }
     }
 }

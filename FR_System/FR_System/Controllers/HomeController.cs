@@ -6,16 +6,19 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 
 namespace FR_System.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        public ContextDB context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ContextDB _context)
         {
             _logger = logger;
+            context = _context;
         }
 
         public IActionResult Index()
@@ -23,6 +26,19 @@ namespace FR_System.Controllers
             return View();
         }
 
+        public IActionResult Search()
+        {
+            ViewBag.dcity=context.Flights.Select(l=>l.FlightFrom).Distinct().ToList();
+            ViewBag.acity = context.Flights.Select(l => l.FlightTo).Distinct().ToList();
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Searchpost(string cityfrom,string cityto,DateTime date1)
+        {
+         
+            IEnumerable<Flight> flightList = context.Flights.Where(l => l.FlightFrom.Equals(cityfrom) && l.FlightTo.Equals(cityto) && l.FlightDDate.Equals(date1)) ;
+            return View(flightList);
+        }
         public IActionResult Privacy()
         {
             return View();
