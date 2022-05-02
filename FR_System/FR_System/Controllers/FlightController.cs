@@ -1,5 +1,6 @@
 ﻿using FR_System.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 
 namespace FR_System.Controllers
@@ -15,6 +16,10 @@ namespace FR_System.Controllers
         // GET-Create Action
         public IActionResult Create()
         {
+            var planeids=new List<SelectListItem>();
+            foreach(var p in _db.Planes)
+                planeids.Add(new SelectListItem() { Value=p.PlaneID.ToString(), Text=p.PlaneID+"-"+p.PlaneName});
+            ViewBag.PlaneID = planeids;
             return View();
         }
 
@@ -81,6 +86,10 @@ namespace FR_System.Controllers
             {
                 return NotFound();
             }
+            var planeids = new List<SelectListItem>();
+            foreach (var p in _db.Planes)
+                planeids.Add(new SelectListItem() { Value = p.PlaneID.ToString(), Text = p.PlaneID + "-" + p.PlaneName });
+            ViewBag.PlaneID = planeids;
             return View(flight);
         }
 

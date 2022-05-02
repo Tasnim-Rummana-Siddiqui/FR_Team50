@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tasni\\OneDrive\\Desktop\\Internship project\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj": {}
+    "E:\\proj\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tasni\\OneDrive\\Desktop\\Internship project\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj": {
+    "E:\\proj\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tasni\\OneDrive\\Desktop\\Internship project\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj",
+        "projectUniqueName": "E:\\proj\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj",
         "projectName": "FR_System",
-        "projectPath": "C:\\Users\\tasni\\OneDrive\\Desktop\\Internship project\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj",
-        "packagesPath": "C:\\Users\\tasni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tasni\\OneDrive\\Desktop\\Internship project\\FR_Team50\\FR_System\\FR_System\\obj\\",
+        "projectPath": "E:\\proj\\FR_Team50\\FR_System\\FR_System\\FR_System.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\proj\\FR_Team50\\FR_System\\FR_System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\tasni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -46,13 +46,13 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.24, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.10, )"
+              "version": "[3.1.24, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

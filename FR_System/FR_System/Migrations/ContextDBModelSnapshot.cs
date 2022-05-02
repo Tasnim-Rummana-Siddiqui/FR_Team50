@@ -64,7 +64,7 @@ namespace FR_System.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PlaneId")
+                    b.Property<int>("PlaneID")
                         .HasColumnType("int");
 
                     b.Property<decimal>("Price")
@@ -72,7 +72,7 @@ namespace FR_System.Migrations
 
                     b.HasKey("FlightId");
 
-                    b.HasIndex("PlaneId");
+                    b.HasIndex("PlaneID");
 
                     b.ToTable("TblFlight");
                 });
@@ -155,7 +155,7 @@ namespace FR_System.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -170,11 +170,6 @@ namespace FR_System.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
-
-                    b.Property<string>("NICNo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(13)")
-                        .HasMaxLength(13);
 
                     b.Property<string>("Password")
                         .IsRequired()
@@ -192,6 +187,9 @@ namespace FR_System.Migrations
 
                     b.HasKey("UserId");
 
+                    b.HasIndex("UserName", "Email")
+                        .IsUnique();
+
                     b.ToTable("TblUser");
                 });
 
@@ -199,7 +197,7 @@ namespace FR_System.Migrations
                 {
                     b.HasOne("FR_System.Models.Plane", "Planes")
                         .WithMany("Flights")
-                        .HasForeignKey("PlaneId")
+                        .HasForeignKey("PlaneID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

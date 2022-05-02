@@ -48,14 +48,11 @@ namespace FR_System.Models
         [StringLength(11)]
         public string PhoneNo { get; set; }
 
-        [Display(Name = "NIC No")]
-        [Required(ErrorMessage = "NIC No Req"), RegularExpression(@"^([0-9]{13})$", ErrorMessage = "NIC No is not valid")]
-        [StringLength(13)]
-        public string NICNo { get; set; }
-
+        
         [Display(Name = "Email ID")]
         [Required(ErrorMessage = "Email ID Req")]
         [DataType(DataType.EmailAddress)]
+        [EmailAddress(ErrorMessage = "Email invalid")]
         public string Email { get; set; }
 
         [Display(Name = "Password")]

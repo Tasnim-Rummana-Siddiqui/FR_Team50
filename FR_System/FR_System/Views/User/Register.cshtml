@@ -8,7 +8,7 @@
 
 <html>
 <head>
-    <title>User Login</title>
+    <title>User Registration</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -32,7 +32,8 @@
 		      		<span class="fa fa-user-o"></span>
 		      	</div>
 		      	<h3 class="text-center mb-4">Register User Account</h3>
-				<form asp-action="RegisterPost" method="post" class="login-form">
+                  <h3 style="color: black;text-align: center;">@ViewBag.regm</h3>
+				<form asp-action="Register" method="post" class="login-form">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
                         <label asp-for="FirstName" class="control-label "></label>
@@ -78,11 +79,11 @@
                         <input asp-for="PhoneNo" class="form-control rounded-left" placeholder="Enter Phone No."/>
                         <span asp-validation-for="PhoneNo" class="text-danger"></span>
                     </div>
-                    <div class="form-group">
+                    @*<div class="form-group">
                         <label asp-for="NICNo" class="control-label "></label>
                         <input asp-for="NICNo" class="form-control rounded-left" placeholder="Enter NIC No"/>
                         <span asp-validation-for="NICNo" class="text-danger"></span>
-                    </div>
+                    </div>*@
                     <div class="form-group">
                         <label asp-for="Email" class="control-label "></label>
                         <input asp-for="Email" class="form-control rounded-left" placeholder="Enter Email Address"/>
