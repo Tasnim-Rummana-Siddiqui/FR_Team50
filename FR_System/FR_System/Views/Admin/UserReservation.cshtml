@@ -1,0 +1,65 @@
+﻿@model IEnumerable<FR_System.Models.TicketViewModel>  
+@{  
+    ViewData["Title"] = "User Booking Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml"; 
+}  
+
+<div id="page-wrapper">
+			<div class="main-page">
+				<h2 class="title1">User-Booking Details</h2>
+				<div class="blank-page widget-shadow scroll" id="style-2 div1">
+<div class="container p-3">
+	<div class="row pt-4">
+		<div class="col-6">
+			<h2 class="text-primary">Ticket Details List</h2>
+		</div>
+	</div>
+	<br />
+
+	@if(Model.Count() > 0)
+	{
+		<table class="table table-bordered table-striped" style="width:90%">
+			<thead>
+				<tr>
+					<th>User Id</th>
+					<th>Reservation Id</th>
+					<th>Flight Id</th>
+					<th>From City</th>
+					<th>To City</th>
+					<th>Travellers</th>
+					<th>Total Fare</th>
+					<th>Payment Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+			   {
+				   <tr>
+					   <td width="10%">@item.userid</td>
+					   <td width="10%">@item.reservations.ReservationId</td>
+					   <td width="10%">@item.reservations.FlightId</td>
+					   <td width="10%">@item.flights.FlightFrom</td>
+					   <td width="10%">@item.flights.FlightTo</td>
+					   <td width="10%">@item.reservations.Travellers</td>
+					   <td width="10%">@item.reservations.Totalprice</td>
+					   @if(item.reservations.Payment==false){
+					      <td width="10%" style="color:red;">Not Initiated</td>
+					   }
+					   @if(item.reservations.Payment==true){
+					     <td width="10%" style="color:green;">Successful</td>
+					   }
+				   </tr>
+			   }
+			</tbody>
+		</table>
+	}
+	else
+	{
+		<p>No booking details available.</p>
+
+	}
+		  <a class="btn btn-danger w-20" asp-action="Users" asp-controller="Admin">Back</a>
+</div>
+</div>
+</div>
+</div>
