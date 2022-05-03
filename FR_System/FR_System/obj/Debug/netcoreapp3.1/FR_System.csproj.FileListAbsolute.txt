@@ -1151,3 +1151,11 @@ E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\Home\S
 E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\User\Booking.cshtml.g.cs
 E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_UserLayout.cshtml.g.cs
 E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\User\Dashboard.cshtml.g.cs
+E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\Home\LoginSearch.cshtml.g.cs
+E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\User\BookingDetails.cshtml.g.cs
+E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\User\TicketVIew.cshtml.g.cs
+E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\Reservation\Booking.cshtml.g.cs
+E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\Reservation\BookingDetails.cshtml.g.cs
+E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\Reservation\TicketVIew.cshtml.g.cs
+E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\Reservation\BookingDelete.cshtml.g.cs
+E:\proj\FR_Team50\FR_System\FR_System\obj\Debug\netcoreapp3.1\Razor\Views\Reservation\BookingUpdate.cshtml.g.cs

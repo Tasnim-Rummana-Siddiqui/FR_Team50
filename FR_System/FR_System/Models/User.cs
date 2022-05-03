@@ -66,6 +66,7 @@ namespace FR_System.Models
         [Compare("Password", ErrorMessage = "Password not matched")]
         public string CPassword { get; set; }
 
+        public virtual ICollection<Reservation> Reservations { get; set; }
 
     }
 }

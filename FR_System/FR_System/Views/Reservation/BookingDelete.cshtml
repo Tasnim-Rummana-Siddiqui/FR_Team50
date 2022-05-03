@@ -1,0 +1,86 @@
+﻿@model FR_System.Models.TicketViewModel
+
+@{
+    ViewData["Title"] = "Booking Cancellation";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+    
+}
+
+<div id="page-wrapper">
+			<div class="main-page">
+				<h2 class="title1">Booking Cancellation</h2>
+				<div class="blank-page widget-shadow scroll" id="style-2 div1">
+<form method="post" asp-action="BookingDelete">
+        <div class="border p-3">
+            
+            <div class="row">
+                <div class="col-12">
+                    <div  class="form-group row">
+                        <label asp-for="reservations.ReservationId" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <input type="text" readonly class="form-control" asp-for="reservations.ReservationId">
+                        </div>
+                    </div>
+                    <div  class="form-group row">
+                        <label asp-for="flights.FlightId" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <input type="text" disabled class="form-control" asp-for="flights.FlightId">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="flights.FlightFrom" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <input type="text" disabled class="form-control" asp-for="flights.FlightFrom">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="flights.FlightTo" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <input type="text" disabled class="form-control" asp-for="flights.FlightTo">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="flights.FlightDDate" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <input asp-for="flights.FlightDDate" disabled type="date" class="form-control">
+                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="flights.DTime" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <input asp-for="flights.DTime" disabled placeholder="Select date" type="time" class="form-control">
+                            
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label asp-for="reservations.Travellers" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <input type="text" disabled class="form-control" asp-for="reservations.Travellers" placeholder="Price">
+                        </div>
+                    </div>
+                  <div class="form-group row">
+                        <label asp-for="reservations.Totalprice" class="col-sm-2 col-form-label"></label>
+                        <div class="col-sm-10">
+                            <input type="text" disabled class="form-control" asp-for="reservations.Totalprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-8 offset-2 row">
+                            <div class="col">
+                                <input type="submit" class="btn btn-danger w-75" value="Cancel Booking" />
+                            </div>
+                            <div class="col">
+                                <a class="btn btn-success w-75" asp-action="BookingDetails" asp-controller="Reservation">Back</a>
+                            </div>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        
+        
+</form>
+</div>
+</div>
+</div>
