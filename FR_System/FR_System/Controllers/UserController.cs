@@ -52,7 +52,17 @@ namespace FR_System.Controllers
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("username")))
                 return RedirectToAction("Login");
             else
-                return View();
+            {
+                int id = int.Parse(HttpContext.Session.GetString("userid"));
+
+                var user = context.Users.Find(id);
+                if (user == null)
+                {
+                    ViewBag.m = "ID or UserName not Matched";
+                    return RedirectToAction("Login");
+                }
+                return View(user);
+            }
         }
 
         public IActionResult Register()
@@ -96,7 +106,7 @@ namespace FR_System.Controllers
         {
             HttpContext.Session.SetString("username", String.Empty);
             HttpContext.Session.SetString("userid", String.Empty);
-            return RedirectToAction("Login");
+            return RedirectToAction("Index","Home");
         }
     }
 }

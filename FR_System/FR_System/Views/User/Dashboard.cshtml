@@ -1,8 +1,102 @@
-﻿
+﻿@model FR_System.Models.User
 @{
     ViewData["Title"] = "Dashboard";
     Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
-<h1>Dashboard</h1>
+<style>
+	.mt-5, .my-5 {
+    margin-top: 1rem !important;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.p-5 {
+    padding: 3rem !important;
+}
+
+.rounded {
+    border-radius: 0.25rem !important;
+}
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+.mt-2, .my-2 {
+    margin-top: 0.5rem !important;
+}
+
+</style>
+<div class="sticky-header header-section ">
+			
+				<div class="header-right">
+				<div class="profile_details">		
+					<ul>
+						<li class="dropdown profile_details_drop">
+
+									<div class="user-name">
+										<p>User ID:@Model.UserId</p>
+										<p>User Name:@Model.UserName</p>
+									</div>
+									<div class="clearfix"></div>	
+						</li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>				
+			</div>
+			<div class="clearfix"> </div>	
+</div>
+		<!-- //header-ends -->
+		<!-- main content start-->
+		<div id="page-wrapper" style="padding:5em 2em 2.5em">
+			<div class="main-page">
+				<h2 class="title1">Welcome to User Dasboard</h2>
+				<div class="blank-page widget-shadow scroll" id="style-2 div1">
+					<div class="container mt-5">
+<div class="card p-5 rounded">
+    <h3 class="card-title">Why book on Flight Reservation System?</h3>
+    <p class="card-body">Flight Reservation System is centered on making travel simple and has been designed to let you look for cheap flights or complete your flight booking in just a few clicks. The booking experience is seamless and fast with our features like Expressway – which allows for easy checkout, Shortlist – this lets you compare multiple itineraries across dates, Fare alert – here we inform you of price drops or hikes, and even EMI options for expensive air tickets. Our round-the-clock customer service ensures all your queries and concerns are addressed efficiently and resolved.</p>
+</div>
+
+<div class="card p-5 rounded mt-2">
+<h3 class="card-title">How to search for flights?</h3>
+<div class="card-body">
+<p>Our search is designed on the principle of best flight discovery and is very easy to use.</p>
+<ul>
+    <li>Enter from and to city/airport</li>
+    <li>Select the date of travel</li>
+    <li>Choose the number of travelers and hit enter</li>
+</ul>
+<p>You’ll be directed to a search list of all the flights available with the cheapest ones on the top. You can further filter your search by choosing preferences and filters like time, duration, number of stops, and by airlines or even look for other dates by just clicking on the calendar visible on the right side of the page.</p>
+</div>
+</div>
+<div class="card p-5 rounded mt-2">
+<h3 class="card-title">What’s more?</h3>
+<p class="card-body">Flight ticket booking or planning your travel is made simpler with our round trip and multicity options. When you hit enter, your search list page shows the results for both onward and return in a split screen format letting you choose flights in one go for a round trip. The multicity search page shows a list of complete itineraries that removes the hassle of you calculating time, transfers and layovers letting you finish your online flight booking. To ensure you get the best price we highlight offers, sales and other promotions on the checkout page. Post booking, our portal allows for easy cancellations or amendments without having to make calls to the airlines.
+
+</p>
+</div>
+				</div>
+			</div>
+		</div>
+		</div>
+   
+
+
 

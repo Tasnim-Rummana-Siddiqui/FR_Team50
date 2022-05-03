@@ -1,0 +1,70 @@
+﻿@model IEnumerable<FR_System.Models.User>
+
+@{
+    ViewData["Title"] = "User Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    
+}
+
+<div id="page-wrapper">
+			<div class="main-page">
+				<h2 class="title1">Index-User Details</h2>
+				<div class="blank-page widget-shadow scroll" id="style-2 div1">
+<div class="container p-3">
+	<div class="row pt-4">
+		<div class="col-6">
+			<h2 class="text-primary">User Details List</h2>
+		</div>
+	</div>
+	<br />
+
+	@if(Model.Count() > 0)
+	{
+		<table class="table table-bordered table-striped" style="width:90%">
+			<thead>
+				<tr>
+					<th>User Id</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>User Name</th>
+					<th>Gender</th>
+					<th>Age</th>
+					<th>Address</th>
+					<th>Phone No</th>
+					<th>Email</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				@foreach (var item in Model)
+			   {
+				   <tr>
+					   <td width="10%">@item.UserId</td>
+					   <td width="10%">@item.FirstName</td>
+					   <td width="10%">@item.LastName</td>
+					   <td width="10%">@item.UserName</td>
+					   <td width="10%">@item.Gender</td>
+					   <td width="10%">@item.Age</td>
+					   <td width="10%">@item.Address</td>
+					   <td width="10%">@item.PhoneNo</td>
+					   <td width="10%">@item.Email</td>
+					   <td width="20%">
+						   <div class="w-100 btn-group" role="group">
+								<a asp-controller="Admin" asp-action="UserReservation" asp-route-Id="@item.UserId" class="btn btn-primary mx-1">View Reservation</a>
+						   </div>
+					   </td>
+				   </tr>
+			   }
+			</tbody>
+		</table>
+	}
+	else
+	{
+		<p>No User details available.</p>
+
+	}
+		  <a class="btn btn-danger w-20" asp-action="Dashboard" asp-controller="Admin">Back</a>
+</div>
+</div>
+</div>
+</div>
