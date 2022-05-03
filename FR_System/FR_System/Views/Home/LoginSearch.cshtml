@@ -1,14 +1,14 @@
 ﻿@model IEnumerable<FR_System.Models.Flight>
 @{
     ViewData["Title"] = "Search Result";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
-<div style="padding:2rem;">
+<div id="page-wrapper">
+			<div class="main-page">
+				<h2 class="title1">Search Results</h2>
+				<div class="blank-page widget-shadow scroll" id="style-2 div1">
 
-<h1>Search Results</h1>
-
-<div>
     <h4>Flight</h4>
     <hr />
     
@@ -38,9 +38,7 @@
 					   <td width="10%">@item.Price</td>
 					   <td width="20%">
 						   <div class="w-100 btn-group" role="group">
-								@*<a asp-controller="Reservation" asp-action="Booking" asp-route-Id="@item.FlightId" class="btn btn-primary mx-1">Book Flight</a>*@
-								<a asp-controller="User" asp-action="Login" class="btn btn-primary mx-1">Login to Book Flight</a>
-						        
+								<a asp-controller="Reservation" asp-action="Booking" asp-route-Id="@item.FlightId" class="btn btn-primary mx-1">Book Flight</a>
 							</div>
 					   </td>
 				   </tr>
@@ -56,5 +54,6 @@
 	
    <a class="btn btn-danger w-20" asp-action="Search" asp-controller="Home">Back</a>
 
+</div>
 </div>
 </div>

@@ -3,6 +3,7 @@ using FR_System.Models;
 using System.Linq;
 using System;
 using Microsoft.AspNetCore.Http;
+using System.Collections.Generic;
 
 namespace FR_System.Controllers
 {
@@ -16,7 +17,9 @@ namespace FR_System.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            if (string.IsNullOrEmpty(HttpContext.Session.GetString("username")))
+                return View("Dashboard");
+            return RedirectToAction("Index", "Home");
         }
         public IActionResult Login()
         {
@@ -54,7 +57,7 @@ namespace FR_System.Controllers
 
         public IActionResult Register()
         {
-            
+
             if (string.IsNullOrEmpty(HttpContext.Session.GetString("username")))
                 return View();
             else
@@ -72,7 +75,8 @@ namespace FR_System.Controllers
                     return NoContent();
                 }
                 var x = context.Users.Where(a => a.Email == user.Email).FirstOrDefault();
-                if (x != null) {
+                if (x != null)
+                {
                     ViewBag.regm = "User with same Email ID is registered";
                     return View();
                 }
@@ -88,20 +92,11 @@ namespace FR_System.Controllers
             }
             return View();
         }
-        //public IActionResult Booking(int? id)
-        //{
-        //    if (string.IsNullOrEmpty(HttpContext.Session.GetString("username")))
-        //        return RedirectToAction("Login");
-        //    if (id == null || id == 0)
-        //    {
-        //        return NotFound();
-        //    }
-        //    var flight = context.Flights.Find(id);
-        //    if (flight == null)
-        //    {
-        //        return NotFound();
-        //    }
-        //    return View(flight);
-        //}
+        public IActionResult Logout()
+        {
+            HttpContext.Session.SetString("username", String.Empty);
+            HttpContext.Session.SetString("userid", String.Empty);
+            return RedirectToAction("Login");
+        }
     }
 }
